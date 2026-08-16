@@ -1,0 +1,568 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f6f6;
+    color: #222;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    background: #111111;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.restaurant-info h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.restaurant-info p {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 2px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: #111111;
+    color: white;
+    text-align: center;
+    padding: 34px 18px;
+}
+
+.hero h2 {
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+
+.hero p {
+    color: #d5d5d5;
+    font-size: 14px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
+    padding: 18px 15px 8px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 14px 17px;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.search-section input:focus {
+    border-color: #111111;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+    max-width: 700px;
+    margin: auto;
+
+    display: flex;
+    gap: 9px;
+
+    padding: 12px 15px 20px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category {
+    flex-shrink: 0;
+
+    border: 1px solid #dddddd;
+
+    background: white;
+    color: #333;
+
+    padding: 9px 15px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.category:hover {
+    background: #eeeeee;
+}
+
+.category.active {
+    background: #111111;
+    color: white;
+    border-color: #111111;
+}
+
+
+/* =========================
+   TODAY'S SPECIAL
+========================= */
+
+.special-section {
+    max-width: 700px;
+    margin: 5px auto 25px;
+    padding: 0 15px;
+}
+
+.special-badge {
+    display: inline-block;
+
+    background: #111111;
+    color: white;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.special-content {
+    background: #111111;
+    color: white;
+
+    border-radius: 18px;
+
+    padding: 12px;
+
+    display: flex;
+    gap: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.special-image {
+    width: 115px;
+    min-width: 115px;
+    height: 115px;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+}
+
+.special-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.special-info {
+    flex: 1;
+}
+
+.special-info h2 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.special-info p {
+    color: #cccccc;
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.special-price {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 4px;
+}
+
+.old-price {
+    color: #999999;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.special-price strong {
+    font-size: 20px;
+}
+
+.offer-text {
+    color: #dddddd;
+    font-size: 11px;
+}
+
+
+/* =========================
+   MENU CONTAINER
+========================= */
+
+.menu-container {
+    width: 100%;
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 0 15px 30px;
+}
+
+.section-title {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   MENU ITEM
+========================= */
+
+.menu-item {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 12px;
+
+    margin-bottom: 14px;
+
+    display: flex;
+
+    gap: 13px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image {
+    width: 95px;
+    min-width: 95px;
+
+    height: 95px;
+
+    border-radius: 12px;
+
+    background: #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   FOOD INFO
+========================= */
+
+.food-info {
+    flex: 1;
+}
+
+.food-info h3 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.food-info p {
+    font-size: 13px;
+
+    color: #777777;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FOOD PRICE
+========================= */
+
+.food-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.food-bottom strong {
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   HIDDEN ITEMS
+========================= */
+
+.menu-item.hidden {
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.simple-footer {
+    text-align: center;
+
+    padding: 25px 15px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+.simple-footer p:first-child {
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+.simple-footer p:last-child {
+    color: #aaaaaa;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .header {
+        padding: 13px 12px;
+    }
+
+    .logo {
+        width: 43px;
+        height: 43px;
+
+        font-size: 22px;
+    }
+
+    .restaurant-info h1 {
+        font-size: 19px;
+    }
+
+    .restaurant-info p {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 28px 15px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+
+    /* SPECIAL */
+
+    .special-section {
+        padding: 0 12px;
+    }
+
+    .special-content {
+        gap: 11px;
+        padding: 10px;
+    }
+
+    .special-image {
+        width: 90px;
+        min-width: 90px;
+        height: 90px;
+    }
+
+    .special-info h2 {
+        font-size: 16px;
+    }
+
+    .special-info p {
+        font-size: 11px;
+    }
+
+    .special-price strong {
+        font-size: 18px;
+    }
+
+
+    /* MENU */
+
+    .menu-item {
+        padding: 10px;
+        gap: 11px;
+    }
+
+    .food-image {
+        width: 82px;
+        min-width: 82px;
+        height: 82px;
+    }
+
+    .food-info h3 {
+        font-size: 15px;
+    }
+
+    .food-info p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .food-bottom strong {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+    .food-image {
+        width: 72px;
+        min-width: 72px;
+        height: 72px;
+    }
+
+    .food-info h3 {
+        font-size: 14px;
+    }
+
+    .food-info p {
+        font-size: 11px;
+    }
+
+    .category {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+}

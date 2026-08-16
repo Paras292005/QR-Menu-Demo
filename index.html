@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Urban Spice | Digital Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="restaurant-info">
+
+            <div class="logo">
+    <img src="images/logo.png" alt="Urban Spice Logo">
+</div>
+
+            <div>
+                <h1>Urban Spice</h1>
+                <p>Digital Menu</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2>Welcome to Urban Spice</h2>
+
+        <p>
+            Explore our delicious menu
+        </p>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search food..."
+            onkeyup="searchFood()"
+        >
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <button
+            class="category active"
+            onclick="filterMenu('all', this)">
+            All
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('starter', this)">
+            🥗 Starters
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('pizza', this)">
+            🍕 Pizza
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('burger', this)">
+            🍔 Burgers
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('main', this)">
+            🍛 Main Course
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('drink', this)">
+            🥤 Drinks
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('dessert', this)">
+            🍰 Desserts
+        </button>
+
+    </section>
+
+
+    <!-- TODAY'S SPECIAL -->
+
+    <section class="special-section">
+
+        <div class="special-badge">
+            🔥 TODAY'S SPECIAL
+        </div>
+
+        <div class="special-content">
+
+            <div class="special-image">
+
+                <img
+                    src="images/pizza.jpg"
+                    alt="Paneer Tikka Pizza">
+
+            </div>
+
+            <div class="special-info">
+
+                <h2>
+                    Paneer Tikka Pizza
+                </h2>
+
+                <p>
+                    Delicious paneer, capsicum,
+                    onion and mozzarella cheese.
+                </p>
+
+                <div class="special-price">
+
+                    <span class="old-price">
+                        ₹249
+                    </span>
+
+                    <strong>
+                        ₹199
+                    </strong>
+
+                </div>
+
+                <span class="offer-text">
+                    Limited Time Offer
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+
+    <main class="menu-container">
+
+        <h2 class="section-title">
+            Our Menu
+        </h2>
+
+
+        <!-- MANCHURIAN -->
+
+        <div
+            class="menu-item"
+            data-category="starter">
+
+            <div class="food-image">
+
+                <img
+                    src="images/manchurian.jpg"
+                    alt="Veg Manchurian">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>
+                    Veg Manchurian
+                </h3>
+
+                <p>
+                    Crispy vegetables with spicy
+                    Manchurian sauce.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>
+                        ₹179
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PIZZA -->
+
+        <div
+            class="menu-item"
+            data-category="pizza">
+
+            <div class="food-image">
+
+                <img
+                    src="images/pizza.jpg"
+                    alt="Paneer Tikka Pizza">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>
+                    Paneer Tikka Pizza
+                </h3>
+
+                <p>
+                    Soft paneer, capsicum,
+                    onion and mozzarella.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>
+                        ₹249
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURGER -->
+
+        <div
+            class="menu-item"
+            data-category="burger">
+
+            <div class="food-image">
+
+                <img
+                    src="images/burger.jpg"
+                    alt="Classic Veg Burger">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>
+                    Classic Veg Burger
+                </h3>
+
+                <p>
+                    Crispy veg patty with fresh
+                    vegetables and cheese.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>
+                        ₹149
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANEER -->
+
+        <div
+            class="menu-item"
+            data-category="main">
+
+            <div class="food-image">
+
+                <img
+                    src="images/paneer.jpg"
+                    alt="Paneer Butter Masala">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>
+                    Paneer Butter Masala
+                </h3>
+
+                <p>
+                    Creamy tomato gravy with
+                    soft paneer.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>
+                        ₹229
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIME SODA -->
+
+        <div
+            class="menu-item"
+            data-category="drink">
+
+            <div class="food-image">
+
+                <img
+                    src="images/lime-soda.jpg"
+                    alt="Fresh Lime Soda">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>
+                    Fresh Lime Soda
+                </h3>
+
+                <p>
+                    Refreshing sweet and salty
+                    lime soda.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>
+                        ₹79
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BROWNIE -->
+
+        <div
+            class="menu-item"
+            data-category="dessert">
+
+            <div class="food-image">
+
+                <img
+                    src="images/brownie.jpg"
+                    alt="Chocolate Brownie">
+
+            </div>
+
+            <div class="food-info">
+
+                <h3>
+                    Chocolate Brownie
+                </h3>
+
+                <p>
+                    Warm chocolate brownie
+                    served with ice cream.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>
+                        ₹129
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="simple-footer">
+
+        <p>
+            © 2026 Urban Spice
+        </p>
+
+        <p>
+            Digital Menu
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
